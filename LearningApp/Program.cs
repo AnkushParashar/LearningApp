@@ -11,10 +11,7 @@ namespace LearningApp
             public int a;
             public int b; 
             public void print()
-            {
-                Console.WriteLine("Hi");
-                string v = a.ToString();
-            }
+            { }
         }
         static void Main(string[] args)
         {
