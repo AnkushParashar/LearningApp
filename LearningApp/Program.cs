@@ -6,16 +6,6 @@ namespace LearningApp
 {
     class Program
     {
-        class test
-        {
-            int bh;
-            public int a;
-            public int b; 
-            public void print()
-            {
-                
-            }
-        }
         static void Main(string[] args)
         {
             string myName = "ANKUSH";
@@ -23,19 +13,41 @@ namespace LearningApp
             string a = "MyName is ankush Parashar675853467";
             string[] names = new [] { "ABHISHEK", "ANJU", "ACHHAR" };
             List<string> abc = new List<string>();
-            List<test> tests = new List<test>();
-            myName.ToLower(); 
-            test t = tests.Where(x => x.a == 2).FirstOrDefault();
-
-            //CREATING AND ARRAY
+            //Console.WriteLine(myName.CompareTo(nyName2));
+            //Console.WriteLine(a.Replace("67", "").ToString());
             
-            var entredString = Console.ReadLine();
+            
+            //STRINGS
+            static string reverseString(string str)
+            {
+                string rev = "";
+                int len = str.Length;
+                for(int i = len - 1; i >= 0; i--)
+                {
+                    rev = rev + str[i];
+                }
+                return rev;
+            }
+            static int reverseNumber(int num)
+            {
+                int rev=0;
+                //21
+
+
+                return rev;
+            }
+            var entredString = (Console.ReadLine()).ToString();
+            entredString = reverseString(entredString).ToString();
+            Console.WriteLine("reverse sring is" + entredString);
+            Console.ReadKey();
+            
+            //CREATING AND ARRAY
             int[,] arr= new int[,]{ {1,2 },{1,2 } };
             for(int i = 0; i <= arr.Length; i++)
             {
-            }
-            //Console.WriteLine(myName.CompareTo(nyName2));
-            //Console.WriteLine(a.Replace("67", "").ToString());
+            } 
+            
+
         }
     }
 }
