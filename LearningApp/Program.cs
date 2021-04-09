@@ -8,10 +8,13 @@ namespace LearningApp
     {
         class test
         {
+            int bh;
             public int a;
             public int b; 
             public void print()
-            { }
+            {
+                
+            }
         }
         static void Main(string[] args)
         {
@@ -27,7 +30,10 @@ namespace LearningApp
             //CREATING AND ARRAY
             
             var entredString = Console.ReadLine();
-            entredString.Split(' ');
+            int[,] arr= new int[,]{ {1,2 },{1,2 } };
+            for(int i = 0; i <= arr.Length; i++)
+            {
+            }
             //Console.WriteLine(myName.CompareTo(nyName2));
             //Console.WriteLine(a.Replace("67", "").ToString());
         }
