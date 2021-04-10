@@ -143,6 +143,12 @@ namespace LearningApp
             {
                 Console.WriteLine(" " +item.Key+ "-" +item.Value+ " ");
             }
+
+            //SPLIT
+            Console.Write("//SPLIT");
+            string splitStr = "a quick brown fox jumps over the lazy dog";
+            string[] abc = splitStr.Split(" ");
+
         }
     }
 }
