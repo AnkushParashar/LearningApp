@@ -45,6 +45,14 @@ namespace LearningApp
         }
         static void Main(string[] args)
         {
+
+            string str= "mama";
+            string rightmove = str[str.Length - 1] + str.Substring(0,str.Length-1);
+            string leftmove = str.Substring(1)+str[0];
+            if (rightmove.CompareTo(leftmove)==0) {
+                Console.Write("matched");
+            }
+
             //SORTING
             Console.WriteLine("\n//SORTING\n");
             string[] allNames = new string[] { "ABHISHEK", "ANJU", "ACHHAR" };
@@ -65,9 +73,9 @@ namespace LearningApp
             Array.Sort(newArray);
             Array.Reverse(newArray);
             Console.Write("\nafter sort\n");
-            foreach (string str in newArray)
+            foreach (string strg in newArray)
             {
-                Console.Write(str + " ");
+                Console.Write(strg + " ");
             }
 
             //To find maximum occuring character in a string;
@@ -148,6 +156,11 @@ namespace LearningApp
             Console.Write("//SPLIT");
             string splitStr = "a quick brown fox jumps over the lazy dog";
             string[] abc = splitStr.Split(" ");
+
+            //SERIES
+            StringPrograms sp = new StringPrograms();
+            int[] series = new int[] { 2, 202, 2, 3, 204, 4, 5,203,206 };
+            sp.getSeries(series);
 
         }
     }
