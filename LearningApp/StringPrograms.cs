@@ -37,5 +37,57 @@ namespace LearningApp
             }
             Console.Write(max);
         }
+
+        internal void StringProgram()
+        {
+            string input = "Morning";
+            string target = "Bring";
+            int add=0, remove=0, replace=0;
+            foreach(char ch in input)
+            {
+                if(!target.Contains(ch))
+                {
+                    input = input.Replace(ch.ToString(), "").ToString();
+                    remove++;
+                }
+            }
+            //rning
+            foreach (char ch in input)
+            {
+                if (!target.Contains(ch))
+                {
+                }
+            }
+            foreach (char ch in input)
+            {
+                if (target.Contains(ch))
+                {
+                }
+            }
+        }
+
+        internal void countMax1s()
+        {
+            string b = "100000111111";
+            int N = 6;
+            int max = -1;
+            int count = 0;
+            for (int i = 0; i < b.Length; i++)
+            {
+                if (b[i] == '1')
+                {
+                    count++;
+                }
+                if (((i+1) % N) == 0 || i == b.Length - 1)
+                {
+                    if (count > max)
+                    {
+                        max = count;
+                    }
+                    count = 0;
+                }
+            }
+            Console.Write("\n"+max);
+        }
     }
 }
