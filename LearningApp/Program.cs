@@ -163,8 +163,11 @@ namespace LearningApp
             sp.getSeries(series);
 
             //STRINGS
-            sp.StringProgram();
+            //sp.findLengthfromStart();
+            //sp.numberOfBrackets();
+            //sp.StringProgram();
             sp.countMax1s();
+            sp.getHSL();
 
 
         }

@@ -14,7 +14,7 @@ namespace LearningApp
         {
             List<int> list = new List<int>();
             int sum = 0;
-            for(int i = 0; i < series.Length; i++)
+            for (int i = 0; i < series.Length; i++)
             {
                 sum = sum + (series[i]);
                 if (i != series.Length - 1)
@@ -31,9 +31,9 @@ namespace LearningApp
                 }
             }
             int max = -1;
-            foreach(int num in list)
+            foreach (int num in list)
             {
-                if (num > max) {  max=num; }
+                if (num > max) { max = num; }
             }
             Console.Write(max);
         }
@@ -42,10 +42,10 @@ namespace LearningApp
         {
             string input = "Morning";
             string target = "Bring";
-            int add=0, remove=0, replace=0;
-            foreach(char ch in input)
+            int add = 0, remove = 0, replace = 0;
+            foreach (char ch in input)
             {
-                if(!target.Contains(ch))
+                if (!target.Contains(ch))
                 {
                     input = input.Replace(ch.ToString(), "").ToString();
                     remove++;
@@ -68,7 +68,7 @@ namespace LearningApp
 
         internal void countMax1s()
         {
-            string b = "100000111111";
+            string b = "101011000011";
             int N = 6;
             int max = -1;
             int count = 0;
@@ -78,7 +78,7 @@ namespace LearningApp
                 {
                     count++;
                 }
-                if (((i+1) % N) == 0 || i == b.Length - 1)
+                if (((i + 1) % N) == 0 || i == b.Length - 1)
                 {
                     if (count > max)
                     {
@@ -87,7 +87,62 @@ namespace LearningApp
                     count = 0;
                 }
             }
-            Console.Write("\n"+max);
+            Console.Write("\n COUNT>>>>" + max);
+        }
+
+        internal void numberOfBrackets()
+        {
+            int N = Convert.ToInt32("8");
+            if (N % 2 == 0)
+            {
+                int n = N / 2;
+                double k = Math.Pow(2, n - 1);
+                Console.WriteLine(k);
+            }
+        }
+
+        internal void findLengthfromStart()
+        {
+            string mixStr = "10Hellomynam";
+            string num = "";
+            foreach (char a in mixStr)
+            {
+                if (Char.IsNumber(a))
+                {
+                    num += a;
+                }
+            }
+            mixStr = mixStr.Substring(num.Length);
+            Console.Write(mixStr.Length == Convert.ToInt32(num));
+        }
+
+        public void getHSL()
+        {
+            string str = "SLH";
+            int countAll = 0;
+            for (int i = 0; i < str.Length; i++)
+            {
+                str = str.Substring(i);
+                int countH = 0, countS = 0, countL = 0;
+                foreach (char a in str)
+                {
+                    if (a == 'H')
+                    {
+                        countH++;
+                    }
+                    if (countH != 0 && a == 'S')
+                    {
+                        countS++;
+                    }
+                    if (countS != 0 && a == 'L')
+                    {
+                        countL++;
+                        countAll++;
+                        countH = 0; countS = 0; countL = 0;
+                    }
+                }
+            }
+            Console.Write("HSL>>>>>>>--"+countAll);
         }
     }
 }
