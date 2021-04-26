@@ -144,5 +144,62 @@ namespace LearningApp
             }
             Console.Write("HSL>>>>>>>--"+countAll);
         }
+        internal void stockPrice()
+        {
+            //int N = int.Parse(Console.ReadLine());
+            int[] prc = new int[5];
+            //for(int e = 0; e < N; e++)
+            //{
+            //    prc[e] = int.Parse(Console.ReadLine());
+            //}
+            prc = new int[]{ 100,60,70,80,85,30,40};
+            //100,60,70,80,85;
+            //1,1,2,3,4
+            if (prc.Length == 5)
+            {
+                Console.Write("Out ");
+                Console.Write("OUT");
+                Console.WriteLine("IN ");
+                Console.WriteLine("IN");
+                return;
+            }
+            for(int i = 0; i < prc.Length; i++)
+            {
+                if (i == 0) { Console.Write("1 "); }
+                if (i != 0 && prc[i] < prc[i - 1])
+                {
+                    Console.Write("1 ");
+                }
+                if(i!=0 && prc[i] > prc[i - 1])
+                {
+                    int count = 0;
+                    int k = i, value= prc[i];
+                    for(int j = k - 1; j >= 0; j--)
+                    {
+                        if (value > prc[j])
+                        {
+                            count++;
+                        }
+                    }
+                    Console.Write(count+1 + " ");
+                }
+            }
+        }
+        
+
+        internal void getSumList()
+        {
+            int[] list = new int[] { 10, 20, 30, 40, 50 };
+            int sum = 0;
+            for (int i = 0; i < list.Length; i++)
+            {
+               for(int j = i + 1; j < list.Length; j++)
+                {
+                    sum = sum + list[j];
+                }
+                Console.Write(sum + " ");
+                sum = 0;
+            }
+        }
     }
 }

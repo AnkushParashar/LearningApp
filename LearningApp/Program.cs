@@ -160,15 +160,16 @@ namespace LearningApp
             //SERIES
             StringPrograms sp = new StringPrograms();
             int[] series = new int[] { 2, 202, 2, 3, 204, 4, 5,203,206 };
-            sp.getSeries(series);
+            //sp.getSeries(series);
 
             //STRINGS
             //sp.findLengthfromStart();
             //sp.numberOfBrackets();
             //sp.StringProgram();
-            sp.countMax1s();
-            sp.getHSL();
-
+            //sp.countMax1s();
+            //sp.getHSL();
+            sp.stockPrice();
+            sp.getSumList();
 
         }
     }
