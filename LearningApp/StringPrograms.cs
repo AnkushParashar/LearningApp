@@ -203,13 +203,28 @@ namespace LearningApp
         }
         public void convertToNumber()
         {
-            string str = (Console.ReadLine().ToString());
+            string str = "Aa9$";// (Console.ReadLine().ToString());
             string num = "";
             foreach (char c in str)
             {
-                num = num + (9 - int.Parse(c.ToString())).ToString();
+                var abc = Char.IsSymbol(c);
+                //num = num + (9 - int.Parse(c.ToString())).ToString();
+                if (Char.IsNumber(c))
+                {
+                    Console.Write("Number ");
+                } else if (Char.IsUpper(c))
+                {
+                    Console.Write(c+" ");
+                } else if (Char.IsLower(c))
+                {
+                    Console.Write(c+" ");
+                }else if (Char.IsSymbol(c))
+                {
+                    Console.Write("Symbol ");
+                }
             }
             Console.Write(num);
+            
         }
     }
 }

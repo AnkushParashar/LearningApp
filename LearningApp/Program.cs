@@ -168,8 +168,8 @@ namespace LearningApp
             //sp.StringProgram();
             //sp.countMax1s();
             //sp.getHSL();
-            sp.stockPrice();
-            sp.getSumList();
+            //sp.stockPrice();
+            //sp.getSumList();
             sp.convertToNumber();
         }
     }
