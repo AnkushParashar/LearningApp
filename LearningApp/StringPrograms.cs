@@ -201,5 +201,15 @@ namespace LearningApp
                 sum = 0;
             }
         }
+        public void convertToNumber()
+        {
+            string str = (Console.ReadLine().ToString());
+            string num = "";
+            foreach (char c in str)
+            {
+                num = num + (9 - int.Parse(c.ToString())).ToString();
+            }
+            Console.Write(num);
+        }
     }
 }

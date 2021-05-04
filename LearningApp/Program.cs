@@ -170,7 +170,7 @@ namespace LearningApp
             //sp.getHSL();
             sp.stockPrice();
             sp.getSumList();
-
+            sp.convertToNumber();
         }
     }
 }
