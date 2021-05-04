@@ -203,8 +203,9 @@ namespace LearningApp
         }
         public void convertToNumber()
         {
-            string str = "Aa9$";// (Console.ReadLine().ToString());
+            string str = "Aa9#";// (Console.ReadLine().ToString());
             string num = "";
+            Math.Abs(-10);
             foreach (char c in str)
             {
                 var abc = Char.IsSymbol(c);
@@ -218,7 +219,7 @@ namespace LearningApp
                 } else if (Char.IsLower(c))
                 {
                     Console.Write(c+" ");
-                }else if (Char.IsSymbol(c))
+                }else
                 {
                     Console.Write("Symbol ");
                 }
