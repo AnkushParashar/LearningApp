@@ -88,5 +88,23 @@ namespace LearningApp
                 }
             }
         }
+        internal void maxthree()
+        {
+            int[] a = { 1, 2, 3, 4, 5, 6, 7 };
+            // 1+2+3, 1+3+4, 1+4+5, 2+3+4, 2+4+5, 3+4+5
+            int sum = 0;
+            int max = -1;
+            int count = 0;
+            //Array.Sort(a);
+            for (int i = 0; i < a.Length - 2; i++)
+            {
+                for (int j = i + 1; j < a.Length - 1; j++)
+                {
+                    int n = a[i] + a[j] + a[j + 1];
+                    max = n > max ? n : max;
+                }
+            }
+            Console.Write(max);
+        }
     }
 }
