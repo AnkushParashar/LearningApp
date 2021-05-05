@@ -171,11 +171,12 @@ namespace LearningApp
             //sp.stockPrice();
             //sp.getSumList();
             //sp.convertToNumber();
-            sp.divideandMerge();
+            //sp.divideandMerge();
 
             Numbers nums = new Numbers();
             //nums.getLeader();
             //nums.getCrownNumber();
+            nums.jj();
         }
     }
 }

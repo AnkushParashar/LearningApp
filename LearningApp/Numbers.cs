@@ -57,5 +57,36 @@ namespace LearningApp
             }
             Console.Write(max);
         }
+        internal void jj()
+        {
+            int[,] abc = { 
+                {1,2 }, 
+                {3,4 },
+                {5,6 }
+            };
+            int _rows = 3;
+            int _columns = 2;
+            int k = 0;
+            for (int i = 0; i < _rows; i++)
+            { //00 01, 11,10
+                //Console.Write("\n");
+                if (k == 0)
+                {
+                    for (int j = 0; j < _columns; j++)
+                    {
+                        Console.Write(abc[i, j] + " ");// = int.Parse(Console.ReadLine());
+                    }
+                    k = 1;
+                }
+                else
+                {
+                    for (int j = _columns-1; j >=0; j--)
+                    {
+                        Console.Write(abc[i, j] + " ");// = int.Parse(Console.ReadLine());
+                    }
+                    k = 0;
+                }
+            }
+        }
     }
 }
