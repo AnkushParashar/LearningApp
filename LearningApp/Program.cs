@@ -170,7 +170,12 @@ namespace LearningApp
             //sp.getHSL();
             //sp.stockPrice();
             //sp.getSumList();
-            sp.convertToNumber();
+            //sp.convertToNumber();
+            sp.divideandMerge();
+
+            Numbers nums = new Numbers();
+            //nums.getLeader();
+            //nums.getCrownNumber();
         }
     }
 }

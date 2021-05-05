@@ -201,11 +201,21 @@ namespace LearningApp
                 sum = 0;
             }
         }
+
+        internal void divideandMerge()
+        {
+            string str1 = "goby";
+            string str2 = "ode";
+            int N = 2;
+           
+            string newstr1 = str1.Substring(0,N)+str2.Substring(0,N)+str1.Substring(N)+str2.Substring(N);
+            Console.Write("\n"+newstr1);
+        }
+
         public void convertToNumber()
         {
             string str = "Aa9#";// (Console.ReadLine().ToString());
             string num = "";
-            Math.Abs(-10);
             foreach (char c in str)
             {
                 var abc = Char.IsSymbol(c);
