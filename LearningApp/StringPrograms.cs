@@ -216,7 +216,7 @@ namespace LearningApp
         {
             string str = "Aa9#";// (Console.ReadLine().ToString());
             string num = "";
-            foreach (char c in str)
+            foreach (char c in str)  
             {
                 var abc = Char.IsSymbol(c);
                 //num = num + (9 - int.Parse(c.ToString())).ToString();
