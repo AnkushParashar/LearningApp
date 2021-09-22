@@ -95,7 +95,7 @@ namespace LearningApp
             int sum = 0;
             int max = -1;
             int count = 0;
-            //Array.Sort(a);
+            //Array.Sort(a); 
             for (int i = 0; i < a.Length - 2; i++)
             {
                 for (int j = i + 1; j < a.Length - 1; j++)
