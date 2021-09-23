@@ -5,39 +5,11 @@ namespace LearningApp
 {
     public class StringPrograms
     {
+        int data;
         public StringPrograms()
         {
-
+            data = 20;
         }
-        // { 2, 202, 2, 3, 204, 4, 5, 203,207 };
-        public void getSeries(int[] series)
-        {
-            List<int> list = new List<int>();
-            int sum = 0;
-            for (int i = 0; i < series.Length; i++)
-            {
-                sum = sum + (series[i]);
-                if (i != series.Length - 1)
-                {
-                    if (series[i] > series[i + 1])
-                    {
-                        list.Add(sum);
-                        sum = 0;
-                    }
-                }
-                else
-                {
-                    list.Add(sum);
-                }
-            }
-            int max = -1;
-            foreach (int num in list)
-            {
-                if (num > max) { max = num; }
-            }
-            Console.Write(max);
-        }
-
         internal void StringProgram()
         {
             string input = "Morning";
@@ -88,6 +60,45 @@ namespace LearningApp
                 }
             }
             Console.Write("\n COUNT>>>>" + max);
+        }
+
+        internal void sortingManupulations()
+        {
+            //SubString
+            string str = "mama";
+            string rightmove = str[str.Length - 1] + str.Substring(0, str.Length - 1);
+            string leftmove = str.Substring(1) + str[0];
+            if (rightmove.CompareTo(leftmove) == 0)
+            {
+                Console.Write("matched");
+            }
+
+            //SORTING
+
+            Program p = new Program();
+            Console.WriteLine("\n//SORTING\n");
+            string[] allNames = new string[] { "ABHISHEK", "ANJU", "ANKUSH", "ACHHAR" };
+            Console.WriteLine(allNames[0].CompareTo(allNames[1]));
+            Console.WriteLine(allNames[0].Replace("67", "").ToString());
+
+            var entredString = (Console.ReadLine()).ToString();
+            entredString = p.reverseNumber(int.Parse(entredString)).ToString();
+            Console.WriteLine("reverse is\n" + entredString);
+
+            Console.Write("after individual words sort\n");
+            string[] newArray = new string[allNames.Length];
+            for (int i = 0; i < allNames.Length; i++)
+            {
+                newArray[i] = p.Sortstring(allNames[i]);
+                Console.Write(newArray[i] + " ");
+            }
+            Array.Sort(newArray);
+            Array.Reverse(newArray);
+            Console.Write("\nafter sort\n");
+            foreach (string strg in newArray)
+            {
+                Console.Write(strg + " ");
+            }
         }
 
         internal void numberOfBrackets()
@@ -185,7 +196,66 @@ namespace LearningApp
                 }
             }
         }
-        
+
+        internal void getmaxOccurance()
+        {
+            //To find maximum occuring character in a string;
+            Console.WriteLine("\n//To find maximum occuring character in a string;\n");
+            string test = "testAnkushsssttt";
+            int[] count = new int[256];
+            foreach (char c in test)
+            {
+                count[c]++;
+            }
+            int max = -1;
+            char result = '-';
+            foreach (char c in test)
+            {
+                if (count[c] > max)
+                {
+                    max = count[c];
+                    result = c;
+                }
+            }
+            Console.Write("\n" + result);
+
+            //Remove Duplicate from string
+            Console.WriteLine("\n//Remove Duplicate from string\n");
+            string inputStr = "aaabbccddeefghiijkkl";
+            string newStr = "";
+            foreach (char ch in inputStr)
+            {
+                if (!newStr.Contains(ch))
+                    newStr = newStr + ch;
+            }
+            Console.WriteLine(newStr);
+            //Find maximum occurred char in a string
+            Dictionary<char, int> mb = new Dictionary<char, int>();
+            string newNewStr = "";
+            foreach (char c in inputStr)
+            {
+                if (newNewStr.Contains(c))
+                {
+                    var val = mb[c];
+                    mb.Remove(c);
+                    mb.Add(c, val + 1);
+                }
+                else
+                {
+                    newNewStr = newNewStr + c;
+                    mb.Add(c, 1);
+                }
+            }
+            foreach (KeyValuePair<char, int> item in mb)
+            {
+                Console.WriteLine(" " + item.Key + "-" + item.Value + " ");
+            }
+
+            //SPLIT
+            Console.Write("//SPLIT");
+            string splitStr = "a quick brown fox jumps over the lazy dog";
+            string[] abc = splitStr.Split(" ");
+        }
 
         internal void getSumList()
         {

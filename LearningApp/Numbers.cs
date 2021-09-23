@@ -1,9 +1,66 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace LearningApp
 {
     class Numbers
     {
+        public void getMaxOccurance()
+        {
+            //Find occurance of integrs in given array
+            Console.WriteLine("\n//Find occurance of integrs in given array\n");
+            int[] arr = new int[] { 10, 20, 30, 10, 10, 20 };
+            int len = arr.Length;
+            System.Collections.Generic.Dictionary<int, int> d = new Dictionary<int, int>();
+            for (int i = 0; i < len; i++)
+            {
+                if (d.ContainsKey(arr[i]))
+                {
+                    var val = d[arr[i]];
+                    d.Remove(arr[i]);
+                    d.Add(arr[i], val + 1);
+                }
+                else
+                {
+                    d.Add(arr[i], 1);
+                }
+            }
+            foreach (KeyValuePair<int, int> m in d)
+            {
+                Console.WriteLine("\n" + m.Key + "-" + m.Value);
+            }
+        }
+        // { 2, 202, 2, 3, 204, 4, 5, 203,207 };
+        public void getSeries()
+        {
+            int[] series = new int[] { 2, 202, 2, 3, 204, 4, 5, 203, 206 };
+            System.Collections.Generic.List<int> list = new List<int>();
+            int sum = 0;
+            for (int i = 0; i < series.Length; i++)
+            {
+                sum = sum + (series[i]);
+                if (i != series.Length - 1)
+                {
+                    if (series[i] > series[i + 1])
+                    {
+                        list.Add(sum);
+                        sum = 0;
+                    }
+                }
+                else
+                {
+                    list.Add(sum);
+                }
+            }
+            int max = -1;
+            foreach (int num in list)
+            {
+                if (num > max) { max = num; }
+            }
+            Console.Write(max);
+        }
+
+
         public void getLeader()
         {
             int N = int.Parse(Console.ReadLine());
