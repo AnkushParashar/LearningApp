@@ -163,7 +163,7 @@ namespace LearningApp
             //{
             //    prc[e] = int.Parse(Console.ReadLine());
             //}
-            prc = new int[]{ 100,60,70,80,85,30,40};
+            prc = new int[] { 100, 60, 70, 80, 85 ,30,40};
             //100,60,70,80,85;
             //1,1,2,3,4
             if (prc.Length == 5)
@@ -174,6 +174,7 @@ namespace LearningApp
                 Console.WriteLine("IN");
                 return;
             }
+           
             for(int i = 0; i < prc.Length; i++)
             {
                 if (i == 0) { Console.Write("1 "); }
@@ -257,20 +258,7 @@ namespace LearningApp
             string[] abc = splitStr.Split(" ");
         }
 
-        internal void getSumList()
-        {
-            int[] list = new int[] { 10, 20, 30, 40, 50 };
-            int sum = 0;
-            for (int i = 0; i < list.Length; i++)
-            {
-               for(int j = i + 1; j < list.Length; j++)
-                {
-                    sum = sum + list[j];
-                }
-                Console.Write(sum + " ");
-                sum = 0;
-            }
-        }
+        
 
         internal void divideandMerge()
         {
@@ -295,7 +283,7 @@ namespace LearningApp
                     Console.Write("Number ");
                 } else if (Char.IsUpper(c))
                 {
-                    Console.Write(c+" ");
+                    Console.Write(c+ " "); ;
                 } else if (Char.IsLower(c))
                 {
                     Console.Write(c+" ");

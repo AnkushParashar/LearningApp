@@ -114,7 +114,7 @@ namespace LearningApp
             }
             Console.Write(max);
         }
-        internal void jj()
+        internal void matrix()
         {
             int[,] abc = { 
                 {1,2 }, 
@@ -162,6 +162,29 @@ namespace LearningApp
                 }
             }
             Console.Write(max);
+        }
+        internal void getSumList()
+        {
+            int[] list = new int[] { 10, 20, 30, 40, 50 };
+            int sum = 0;
+            for (int i = 0; i < list.Length; i++)
+            {
+                for (int j = i + 1; j < list.Length; j++)
+                {
+                    sum = sum + list[j];
+                }
+                Console.Write(sum + " ");
+                sum = 0;
+            }
+        }
+        public void getProductOfDigits(int num = 231)
+        {
+            int k = 1;
+            while (num > 0)
+            {
+                k = k * num % 10;
+                num = num / 10;
+            }
         }
     }
 }

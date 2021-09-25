@@ -47,8 +47,8 @@ namespace LearningApp
         {
             Numbers nums = new Numbers();
             StringPrograms sp = new StringPrograms();
-            int val= Convert.ToInt32(Console.ReadLine());
-            switch (val)
+            Console.Write("Enter program number: ");
+            switch (Convert.ToInt32(Console.ReadLine()))
             {
                 //STRINGS
                 case 1: sp.sortingManupulations(); break;
@@ -59,7 +59,7 @@ namespace LearningApp
                 case 6: sp.countMax1s(); break;
                 case 7: sp.getHSL(); break;
                 case 8: sp.stockPrice(); break;
-                case 9: sp.getSumList(); break;
+                case 9: nums.getSumList(); break;
                 case 10: sp.convertToNumber(); break;
                 case 11: sp.divideandMerge(); break;
 
@@ -68,7 +68,10 @@ namespace LearningApp
                 case 13: nums.getSeries(); ; break;
                 case 14: nums.getLeader(); break;
                 case 15: nums.getCrownNumber(); break;
-                case 16: nums.jj(); break;
+                case 16: nums.matrix(); break;
+                case 17: nums.getProductOfDigits();break;
+                case 18: nums.maxthree(); break;
+
                 default:
                     return;
             }
