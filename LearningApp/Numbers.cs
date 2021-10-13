@@ -186,5 +186,24 @@ namespace LearningApp
                 num = num / 10;
             }
         }
+        public void getNum(int ax=4,int by=4)
+        {
+            int x= 0, y= 0, m= 0, step = 0;
+            while((x!=ax || y != by))
+            {
+                if (m == 0)
+                {
+                    y = y + 1;
+                    m = 1;
+                }
+                else
+                {
+                    x = x + 1;
+                    m = 0;
+                }
+                step += 1;
+            }
+            Console.Write(step);
+        }
     }
 }

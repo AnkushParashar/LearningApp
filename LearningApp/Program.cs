@@ -63,7 +63,7 @@ namespace LearningApp
                 case 10: sp.convertToNumber(); break;
                 case 11: sp.divideandMerge(); break;
 
-                //SERIES
+                //Numbers
                 case 12: nums.getMaxOccurance(); break;
                 case 13: nums.getSeries(); ; break;
                 case 14: nums.getLeader(); break;
@@ -71,6 +71,7 @@ namespace LearningApp
                 case 16: nums.matrix(); break;
                 case 17: nums.getProductOfDigits();break;
                 case 18: nums.maxthree(); break;
+                case 19: nums.getNum(); break;
 
                 default:
                     return;
