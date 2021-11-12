@@ -5,6 +5,36 @@ namespace LearningApp
 {
     class Program
     {
+        public enum Gender
+        {
+            Male,
+            Female,
+            Others
+        }
+        abstract class User
+        {
+            public string name;
+            public int age;
+            public Gender gender;
+            public User(string Name,int Age, Gender Gender)
+            {
+                name = Name;
+                age = Age;
+                gender = Gender;
+            }
+        }
+        class Admin : User
+        {
+            public Admin(int age, Gender gender) : base("Ankush",age, gender) { }
+        }
+        static void CallandCheckInheritance()
+        {
+            Admin a = new Admin(25,Gender.Male);
+            Console.Write(a.name + " " + a.age + " " + a.gender);
+        }
+
+
+
         //STRINGS
         static string reverseString(string str)
         {
@@ -51,6 +81,7 @@ namespace LearningApp
             switch (Convert.ToInt32(Console.ReadLine()))
             {
                 //STRINGS
+                case 0: CallandCheckInheritance(); break;
                 case 1: sp.sortingManupulations(); break;
                 case 2: sp.getmaxOccurance(); break;
                 case 3: sp.findLengthfromStart(); break;
