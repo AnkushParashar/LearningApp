@@ -31,8 +31,16 @@ namespace LearningApp
         {
             Admin a = new Admin(25,Gender.Male);
             Console.Write(a.name + " " + a.age + " " + a.gender);
+            ISample s = new TestInterface();
+            s.sample();
         }
-
+        class TestInterface : ISample
+        {
+            public void sample()
+            {
+                Console.Beep();
+            }
+        }
 
 
         //STRINGS
