@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace LearningApp
@@ -26,6 +27,7 @@ namespace LearningApp
         class Admin : User
         {
             public Admin(int age, Gender gender) : base("Ankush",age, gender) { }
+            
         }
         static void CallandCheckInheritance()
         {
@@ -33,8 +35,18 @@ namespace LearningApp
             Console.Write(a.name + " " + a.age + " " + a.gender);
             ISample s = new TestInterface();
             s.sample();
+            /*
+            Stack st = new Stack();
+            st.Push('y');
+            */
+            LinkedList<string> linkedList = new LinkedList<string>();
+            linkedList.AddLast("A");
+            foreach(string y in linkedList)
+            {
+                Console.Write(y);
+            }
         }
-        class TestInterface : ISample
+    class TestInterface : ISample
         {
             public void sample()
             {
