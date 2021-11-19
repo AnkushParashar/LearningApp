@@ -1,17 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 
 namespace LearningApp
 {
     class Program
     {
-        public enum Gender
-        {
-            Male,
-            Female,
-            Others
-        }
         abstract class User
         {
             public string name;
@@ -28,6 +23,13 @@ namespace LearningApp
         {
             public Admin(int age, Gender gender) : base("Ankush",age, gender) { }
             
+        }
+        class TestInterface : ISample
+        {
+            public void sample()
+            {
+                Console.Beep();
+            }
         }
         static void CallandCheckInheritance()
         {
@@ -46,15 +48,7 @@ namespace LearningApp
                 Console.Write(y);
             }
         }
-    class TestInterface : ISample
-        {
-            public void sample()
-            {
-                Console.Beep();
-            }
-        }
-
-
+        #region String Programs
         //STRINGS
         static string reverseString(string str)
         {
@@ -93,10 +87,12 @@ namespace LearningApp
             string str = num.ToString();
             return int.Parse(Sortstring(str));
         }
+        #endregion
         static void Main(string[] a)
         {
             Numbers nums = new Numbers();
             StringPrograms sp = new StringPrograms();
+            Files f = new Files();
             Console.Write("Enter program number: ");
             switch (Convert.ToInt32(Console.ReadLine()))
             {
@@ -123,10 +119,21 @@ namespace LearningApp
                 case 17: nums.getProductOfDigits();break;
                 case 18: nums.maxthree(); break;
                 case 19: nums.getNum(); break;
+                
+                //Files
+                case 20: f.FileProgram(); break;
 
                 default:
                     return;
             }
         }
+       
+
+    }
+    public enum Gender
+    {
+        Male,
+        Female,
+        Others
     }
 }
