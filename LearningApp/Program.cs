@@ -48,6 +48,18 @@ namespace LearningApp
                 Console.Write(y);
             }
         }
+
+        public delegate bool isPromoted(Employee emp);
+        private static void DelegatesExample()
+        {
+            List<Employee> emps = new List<Employee>();
+            emps.Add(new Employee { ID = 101, Name = "Ankush", Salary = 2000, Experience = 2 });
+            emps.Add(new Employee { ID = 102, Name = "Abhishek", Salary = 3000, Experience = 3 });
+            emps.Add(new Employee { ID = 103, Name = "Praveen", Salary = 4000, Experience = 5 });
+            emps.Add(new Employee { ID = 104, Name = "Raj", Salary = 5000, Experience = 6 });
+
+            Employee.GetListOfEmployes(emps, x=>x.Experience>=5);
+        }
         #region String Programs
         //STRINGS
         static string reverseString(string str)
@@ -119,15 +131,14 @@ namespace LearningApp
                 case 17: nums.getProductOfDigits();break;
                 case 18: nums.maxthree(); break;
                 case 19: nums.getNum(); break;
-                
                 //Files
                 case 20: f.FileProgram(); break;
+                case 21: DelegatesExample(); break;
 
                 default:
                     return;
             }
         }
-       
 
     }
     public enum Gender
