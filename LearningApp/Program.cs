@@ -24,8 +24,14 @@ namespace LearningApp
             public Admin(int age, Gender gender) : base("Ankush",age, gender) { }
             
         }
-        class TestInterface : ISample
+        class TestInterface : ISample, ITest
         {
+            private readonly string data;
+            private const int a = 10;
+            public TestInterface()
+            {
+                data = "";
+            }
             public void sample()
             {
                 Console.Beep();
@@ -36,6 +42,7 @@ namespace LearningApp
             Admin a = new Admin(25,Gender.Male);
             Console.Write(a.name + " " + a.age + " " + a.gender);
             ISample s = new TestInterface();
+            ITest t = new TestInterface();
             s.sample();
             /*
             Stack st = new Stack();
