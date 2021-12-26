@@ -58,9 +58,15 @@ namespace LearningApp
 
             Employee.GetListOfEmployes(emps, x => x.Experience >= 5);
         }
+        private static void Ext_MethodsExample()
+        {
+            string name = "Ankush";
+            name = name.getFormat();
+            Console.WriteLine(name);
+        }
 
-        #region String Programs
         //STRINGS
+        #region String Programs
         static string reverseString(string str)
         {
             string rev = "";
@@ -99,13 +105,8 @@ namespace LearningApp
             return int.Parse(Sortstring(str));
         }
         #endregion
-        public static void Ext_MethodsExample()
-        {
-            string name = "Ankush";
-            name = name.getFormat();
-            Console.WriteLine(name);
-        }
-        static void Main(string[] a)
+        
+        static void Main(string[] args)
         {
             Numbers nums = new Numbers();
             StringPrograms sp = new StringPrograms();
