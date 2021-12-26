@@ -43,6 +43,12 @@ namespace LearningApp
             string str = num.ToString();
             return int.Parse(Sortstring(str));
         }
+        public static void Ext_MethodsExample()
+        {
+            string name = "Ankush";
+            name = name.getFormat();
+            Console.WriteLine(name);
+        }
         static void Main(string[] a)
         {
             Numbers nums = new Numbers();
@@ -62,6 +68,7 @@ namespace LearningApp
                 case 9: nums.getSumList(); break;
                 case 10: sp.convertToNumber(); break;
                 case 11: sp.divideandMerge(); break;
+                case 20: Ext_MethodsExample(); break;
 
                 //Numbers
                 case 12: nums.getMaxOccurance(); break;
@@ -76,6 +83,7 @@ namespace LearningApp
                 default:
                     return;
             }
+            Console.ReadKey();
         }
     }
 }
