@@ -8,6 +8,7 @@ namespace LearningApp
 {
     interface ISample
     {
+        public string i { get; }
         public void sample();
     }
 }

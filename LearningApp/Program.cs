@@ -7,7 +7,7 @@ namespace LearningApp
     {
         abstract class User
         {
-            public string name;
+            public string name { get; set; }
             public int age;
             public Gender gender;
             public User(string Name, int Age, Gender Gender)
@@ -24,6 +24,8 @@ namespace LearningApp
         }
         class TestInterface : ISample
         {
+            public string i { get; set; }
+
             public void sample()
             {
                 Console.Beep();
