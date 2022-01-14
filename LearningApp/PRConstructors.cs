@@ -9,10 +9,12 @@ namespace LearningApp
     class PRConstructors
     {
         public static string data;
+        public string NonStaticData;
         public static PRConstructors instance = null; 
         private PRConstructors()
         {
             data = "Single Instance Class";
+            NonStaticData = "";
         }
 
         public static PRConstructors getInstance()

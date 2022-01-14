@@ -69,6 +69,8 @@ namespace LearningApp
         private static void singleInstaceMethdods()
         {
             PRConstructors.data = "";
+            PRConstructors.getInstance().NonStaticData = "";
+
             Class_static.data = "";
         }
         //STRINGS
