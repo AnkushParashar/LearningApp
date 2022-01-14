@@ -56,8 +56,9 @@ namespace LearningApp
             emps.Add(new Employee { ID = 103, Name = "Praveen", Salary = 4000, Experience = 5 });
             emps.Add(new Employee { ID = 104, Name = "Raj", Salary = 5000, Experience = 6 });
 
-            Employee.GetListOfEmployes(emps, x => x.Experience >= 5);
+            Employee.GetListOfEmployes(emps,  x => x.Experience >= 5);
         }
+
         private static void Ext_MethodsExample()
         {
             string name = "Ankush";
@@ -65,6 +66,11 @@ namespace LearningApp
             Console.WriteLine(name);
         }
 
+        private static void singleInstaceMethdods()
+        {
+            PRConstructors.data = "";
+            Class_static.data = "";
+        }
         //STRINGS
         #region String Programs
         static string reverseString(string str)
