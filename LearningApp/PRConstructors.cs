@@ -32,6 +32,7 @@ namespace LearningApp
     static class Class_static
     {
         public static string data;
+        public static dynamic Obj;
         static Class_static()
         {
             data = "Single Instace Class";
@@ -39,6 +40,10 @@ namespace LearningApp
         public static void getData()
         {
             Console.Write(data);
+        }
+        public static void tt(dynamic test)
+        {
+
         }
     }
     
