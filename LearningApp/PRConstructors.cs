@@ -46,5 +46,13 @@ namespace LearningApp
 
         }
     }
+    sealed class Class_sealed
+    {
+        public string data;
+        void getString()
+        {
+
+        }
+    }
     
 }

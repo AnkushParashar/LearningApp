@@ -74,6 +74,12 @@ namespace LearningApp
             PRConstructors.getInstance().NonStaticData = "";
 
             Class_static.data = "";
+
+            //Sealed class can be intantiated
+            Class_sealed s = new Class_sealed();
+
+            //Static class can not be intantiated
+            //Class_static ss = new Class_static();
         }
         //STRINGS
         #region String Programs
