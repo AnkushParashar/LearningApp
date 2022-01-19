@@ -46,6 +46,7 @@ namespace LearningApp
 
         }
     }
+
     sealed class Class_sealed
     {
         public string data;
@@ -54,5 +55,26 @@ namespace LearningApp
 
         }
     }
-    
+
+    //Exmple of single instance Class
+    public sealed class UserService
+    {
+       private static UserService instance = null;
+       public static string userName { get; set; }
+       public static int userId { get; set; }
+       private UserService() { }
+       public static UserService getInstance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new UserService();
+                }
+                return instance;
+            }
+        }
+        
+    }
+
 }

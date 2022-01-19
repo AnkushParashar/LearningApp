@@ -72,6 +72,7 @@ namespace LearningApp
         {
             PRConstructors.data = "";
             PRConstructors.getInstance().NonStaticData = "";
+            PRConstructors.getInstance().NonStaticData = "12";
 
             Class_static.data = "";
 
@@ -80,6 +81,8 @@ namespace LearningApp
 
             //Static class can not be intantiated
             //Class_static ss = new Class_static();
+
+            UserService.userId = 12;
         }
         //STRINGS
         #region String Programs
