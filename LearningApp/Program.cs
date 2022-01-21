@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace LearningApp
 {
@@ -124,7 +126,26 @@ namespace LearningApp
             return int.Parse(Sortstring(str));
         }
         #endregion
-        
+
+        #region async Programming
+
+        private static int GetValue()
+        {
+            int value= 0;
+            Thread.Sleep(2000);
+            return value;
+        }
+        static async void aSynExample()
+        {
+            Task<int> task = new Task<int>(GetValue);
+            task.Start();
+
+            Console.Write("Please wait...");
+            int data = await task;
+            Console.Write("processing done!");
+        }
+        #endregion
+
         static void Main(string[] args)
         {
             Numbers nums = new Numbers();
@@ -147,7 +168,6 @@ namespace LearningApp
                 case 10: sp.convertToNumber(); break;
                 case 11: sp.divideandMerge(); break;
                
-
                 //Numbers
                 case 12: nums.getMaxOccurance(); break;
                 case 13: nums.getSeries(); ; break;
@@ -162,6 +182,7 @@ namespace LearningApp
                 case 20: f.FileProgram(); break;
                 case 21: DelegatesExample(); break;
                 case 22: Ext_MethodsExample(); break;
+                case 23: aSynExample(); break;
 
 
                 default:
