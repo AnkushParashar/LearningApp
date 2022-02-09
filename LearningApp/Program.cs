@@ -136,7 +136,7 @@ namespace LearningApp
         private static int GetValue()
         {
             int value= 0;
-            Thread.Sleep(2000);
+            Thread.Sleep(7000);
             return value;
         }
         static async void aSynExample()
