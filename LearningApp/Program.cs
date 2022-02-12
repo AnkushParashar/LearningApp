@@ -24,7 +24,7 @@ namespace LearningApp
             public Admin(int age, Gender gender) : base("Ankush", age, gender) { }
 
         }
-        class TestInterface : ISample
+        class TestInterface : ISample, ITest
         {
             public string i { get; set; }
 
@@ -37,6 +37,8 @@ namespace LearningApp
         {
             Admin a = new Admin(25, Gender.Male);
             Console.Write(a.name + " " + a.age + " " + a.gender);
+            TestInterface abc= new TestInterface();
+            abc.sample();
             ISample s = new TestInterface();
             s.sample();
             /*
@@ -149,7 +151,18 @@ namespace LearningApp
             Console.Write("processing done!");
         }
         #endregion
+        static void LinkedListImplement()
+        {
+            MyLinkedList list = new MyLinkedList();
+            list.AddNewLast(12);
+            list.AddNewLast(10);
+            list.AddNewLast(14);
+            list.AddNewLast(15);
+            list.AddNewFirst(-2);
+            list.AddAt(17, -9);
 
+            list.PrintList();
+        }
         static void Main(string[] args)
         {
             Numbers nums = new Numbers();
@@ -187,6 +200,7 @@ namespace LearningApp
                 case 21: DelegatesExample(); break;
                 case 22: Ext_MethodsExample(); break;
                 case 23: aSynExample(); break;
+                case 24: LinkedListImplement(); break;
 
 
                 default:
